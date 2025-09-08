@@ -1,0 +1,11 @@
+.todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.todos table {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}

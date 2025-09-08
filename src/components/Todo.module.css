@@ -1,0 +1,59 @@
+* {
+  color: black;
+}
+.todoRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.id {
+  width: 5%;
+}
+.todo {
+  width: 90%;
+}
+.completed {
+  width: fit-content;
+}
+
+.id,
+.todo,
+.completed {
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+
+.todoRow:nth-child(even) {
+  background-color: rgb(240, 247, 248);
+}
+
+.delete {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  font-size: 15px;
+  height: 50px;
+}
+.delete {
+  background-color: rgba(243, 49, 49, 0.925);
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  background: white;
+}
+
+input[type="checkbox"]:checked {
+  background: rgba(49, 243, 49, 0.925);
+  border-color: rgba(49, 243, 49, 0.925);
+}
