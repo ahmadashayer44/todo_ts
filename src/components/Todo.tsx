@@ -2,20 +2,30 @@ import TodoCss from "./Todo.module.css";
 import type { TODO } from "../data/todos";
 
 export default function Todo(t: TODO) {
-  const { id, todo, completed, userId } = t;
+  const { id, todo, completed } = t;
   return (
     <tr className={TodoCss.todoRow}>
-      <div className={TodoCss.id}>{id}</div>
-      <div className={TodoCss.todo}>{todo}</div>
-      <div className={TodoCss.completed}>
-        {completed ? "Complete" : "Pending"}
-      </div>
-      <button className={TodoCss.delete}>Delete</button>
-      <input
-        className={TodoCss.completeCheckbox}
-        type="checkbox"
-        checked={completed}
-      />
+      <td className={TodoCss.id}>
+        <div>{id}</div>
+      </td>
+      <td className={TodoCss.todo}>
+        <div>{todo}</div>
+      </td>
+      <td className={TodoCss.completed}>
+        <div>{completed ? "Complete" : "Pending"}</div>
+      </td>
+      <td>
+        <button className={TodoCss.delete}>Delete</button>
+      </td>
+      <td>
+        <div>
+          <input
+            className={TodoCss.completeCheckbox}
+            type="checkbox"
+            checked={completed}
+          />
+        </div>
+      </td>
     </tr>
   );
 }

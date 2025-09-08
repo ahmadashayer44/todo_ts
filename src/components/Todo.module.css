@@ -48,12 +48,12 @@ input[type="checkbox"] {
   width: 20px;
   height: 20px;
   border: 2px solid #ccc;
-  border-radius: 5px;
+  border-radius: 50%;
   cursor: pointer;
   background: white;
 }
 
 input[type="checkbox"]:checked {
-  background: rgba(49, 243, 49, 0.925);
-  border-color: rgba(49, 243, 49, 0.925);
+  background: rgba(76, 141, 76, 0.925);
+  border-color: rgba(76, 141, 76, 0.925);
 }
