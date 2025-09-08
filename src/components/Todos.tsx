@@ -3,7 +3,7 @@ import { todos as todoData } from "../data/todos";
 import type { TODO } from "../data/todos";
 import TodoCss from "./Todos.module.css";
 import Todo from "./Todo";
-type Action =
+export type Action =
   | { type: "add"; payload: TODO }
   | { type: "delete"; payload: number }
   | { type: "complete"; payload: TODO };
@@ -40,7 +40,7 @@ export default function Todos() {
       <table>
         <tbody>
           {todos.map((todo) => {
-            return <Todo key={todo.id} {...todo} />;
+            return <Todo key={todo.id} {...todo} dispatch={dispatch} />;
           })}
         </tbody>
       </table>
@@ -54,6 +54,12 @@ function todoReducer(state: TODO[], action: Action): TODO[] {
       return [...state, action.payload];
 
     case "complete":
+      return state.map((todo) => {
+        if (todo.id === action.payload.id) {
+          return action.payload;
+        }
+        return todo;
+      });
 
     case "delete":
 
