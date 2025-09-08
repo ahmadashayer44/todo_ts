@@ -25,7 +25,12 @@ export default function Todo({
         <div>{completed ? "Complete" : "Pending"}</div>
       </td>
       <td>
-        <button className={TodoCss.delete}>Delete</button>
+        <button
+          onClick={() => dispatch({ type: "delete", payload: id })}
+          className={TodoCss.delete}
+        >
+          Delete
+        </button>
       </td>
       <td>
         <div>

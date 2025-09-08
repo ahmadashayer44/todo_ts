@@ -62,6 +62,9 @@ function todoReducer(state: TODO[], action: Action): TODO[] {
       });
 
     case "delete":
+      return state.filter((todo) => {
+        return todo.id !== action.payload;
+      });
 
     default:
       return state;
